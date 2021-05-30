@@ -1,5 +1,5 @@
 let config = {
-  pathPrefix: "/personal-homepage",
+  pathPrefix: "/",
   siteMetadata: {
     title: `Zehua Chen's Homepage`,
     description: `This is a page about Zehua Chen!`,
