@@ -4,23 +4,22 @@
 
 ### Get Started
 
-```
-yarn start
-```
-
-Start development server
-
-```
-yarn build
-```
-
-Create build
-
-```
-git push release
-```
-
-Publish site to [Netlify](https://www.netlify.com/)
+- Start development server
+  ```
+  yarn start
+  ```
+- Run linter on project
+  ```
+  yarn lint
+  ```
+- Create build
+  ```
+  yarn build
+  ```
+- Publish site to [Netlify](https://www.netlify.com/)
+  ```
+  git push release
+  ```
 
 ### Git
 

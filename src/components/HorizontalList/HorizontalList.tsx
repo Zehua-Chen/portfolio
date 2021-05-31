@@ -1,12 +1,12 @@
 import React, { PropsWithChildren, HTMLProps } from "react";
 import clsx from "classnames";
-import { createStyles, makeStyles, Theme } from "@material-ui/core/styles";
+import { createStyles, makeStyles } from "@material-ui/core/styles";
 
 export interface HorizontalListProps extends HTMLProps<HTMLUListElement> {
   height?: number;
 }
 
-const styles = (theme: Theme) =>
+const styles = () =>
   createStyles({
     list: {
       // Set background color
