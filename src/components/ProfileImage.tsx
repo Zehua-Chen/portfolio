@@ -2,10 +2,6 @@ import React from "react";
 import { StaticQuery, graphql } from "gatsby";
 import Img from "gatsby-image";
 
-function _ProfileImage() {
-  return <div></div>;
-}
-
 function ProfileImage() {
   return (
     <StaticQuery
@@ -27,4 +23,4 @@ function ProfileImage() {
   );
 }
 
-export default _ProfileImage;
+export default ProfileImage;

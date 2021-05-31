@@ -1,4 +1,4 @@
-import React, { Fragment } from "react";
+import React from "react";
 import Helmet from "react-helmet";
 import Accordion from "@material-ui/core/Accordion";
 import AccordionSummary from "@material-ui/core/AccordionSummary";
@@ -106,7 +106,7 @@ function AboutMe() {
         </div>
         <Divider className={classes.divider} />
         <TextBody>
-          In addition, I believe in "the right tool for the right job".
+          In addition, I believe in &quot;the right tool for the right job&quot;.
           Therefore, I choose the tech stack to use in projects based on
           criterias like what platform do I deploy against, what set up
           experience do I want my users to have, the tooling of a language,
