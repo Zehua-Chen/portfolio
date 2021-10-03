@@ -19,7 +19,7 @@ export interface ProjectCardProps extends HTMLProps<HTMLDivElement> {
 
 const styles = (theme: Theme) =>
   createStyles({
-    card: (props: ProjectCardProps) => ({
+    card: () => ({
       // Height and width
       height: "100%",
       // Flex
