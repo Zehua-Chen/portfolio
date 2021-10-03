@@ -1,4 +1,4 @@
-import React, { Fragment } from "react";
+import React from "react";
 import { graphql, StaticQuery } from "gatsby";
 import Helmet from "react-helmet";
 import Container from "@material-ui/core/Container";

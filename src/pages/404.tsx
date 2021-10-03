@@ -1,6 +1,5 @@
-import React, { Fragment } from "react";
+import React from "react";
 import Typography from "@material-ui/core/Typography";
-import Icon from "@material-ui/core/Icon";
 import { createStyles, makeStyles, Theme } from "@material-ui/core/styles";
 import ErrorIcon from "@material-ui/icons/Error";
 import Layout from "../components/Layout";
