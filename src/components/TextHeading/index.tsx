@@ -1,27 +1,18 @@
-import React, { PropsWithChildren } from "react";
-import clsx from "classnames";
-import Typography, { TypographyProps } from "@material-ui/core/Typography";
-import { createStyles, makeStyles, Theme } from "@material-ui/core/styles";
-
-const styles = (theme: Theme) =>
-  createStyles({
-    heading: {
-      marginTop: theme.spacing(),
-      marginBottom: theme.spacing(),
-    },
-  });
-
-const useStyles = makeStyles(styles);
+import { PropsWithChildren } from "react";
+import { css } from "@emotion/react";
+import Typography, { TypographyProps } from "@mui/material/Typography";
 
 function TextHeading(
   props: PropsWithChildren<Omit<TypographyProps, "variant">>
 ) {
-  const { children, className, ...others } = props;
-  const classes = useStyles();
+  const { children, ...others } = props;
 
   return (
     <Typography
-      className={clsx(classes.heading, className)}
+      css={(theme) => css`
+        margin-top: ${theme.spacing()},
+        margin-bottom: ${theme.spacing()},
+      `}
       variant="h5"
       {...others}
     >
