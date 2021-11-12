@@ -27,15 +27,15 @@ function ProjectCard(props: ProjectCardProps) {
     <div
       css={(theme) => css`
         // Height and width
-        height: "100%";
+        height: 100%;
         // Flex
-        display: "flex";
-        flexDirection: "column";
+        display: flex;
+        flex-direction: column;
         // Color
         background-color: ${theme.palette.background.paper};
         // border
-        border: "1px solid ${theme.palette.grey[300]}"",
-        border-radius: theme.shape.borderRadius;
+        border: 1px solid ${theme.palette.grey[300]};
+        border-radius: ${theme.shape.borderRadius}px;
       `}
       {...others}
     >
@@ -43,7 +43,7 @@ function ProjectCard(props: ProjectCardProps) {
       {/* project titles, fixed size */}
       <CardContent
         css={(theme) => css`
-          padding-bottom: ${theme.spacing()};
+          padding-bottom: ${theme.spacing()}px;
         `}
       >
         <Typography variant="subtitle1">{title}</Typography>
@@ -54,8 +54,8 @@ function ProjectCard(props: ProjectCardProps) {
         css={css`
           flex-grow: 1;
           padding-top: 0;
-          height: "auto";
-          overflowy: "auto";
+          height: auto;
+          overflowy: auto;
         `}
       >
         {overview}

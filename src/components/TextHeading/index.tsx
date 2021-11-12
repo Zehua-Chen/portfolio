@@ -10,8 +10,8 @@ function TextHeading(
   return (
     <Typography
       css={(theme) => css`
-        margin-top: ${theme.spacing()},
-        margin-bottom: ${theme.spacing()},
+        margin-top: ${theme.spacing()}px;
+        margin-bottom: ${theme.spacing()}px;
       `}
       variant="h5"
       {...others}

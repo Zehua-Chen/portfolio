@@ -81,8 +81,8 @@ function AboutMe() {
         </div>
         <Divider
           css={(theme) => css`
-            margintop: ${theme.spacing(4)};
-            marginbottom: ${theme.spacing()};
+            margin-top: ${theme.spacing(4)}px;
+            margin-bottom: ${theme.spacing()}px;
           `}
         />
         <TextBody>

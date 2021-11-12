@@ -61,13 +61,13 @@ function ProjectTemplate(props: any) {
       <div
         css={(theme) => css`
           background: ${theme.palette.primary.main};
-          height: 260;
+          height: 260px;
         `}
       >
         <Typography
           css={(theme) => css`
-            padding-top: 75;
-            text-align: "center";
+            padding-top: 75px;
+            text-align: center;
             color: ${theme.palette.primary.contrastText};
           `}
           variant="h4"
@@ -77,7 +77,7 @@ function ProjectTemplate(props: any) {
         {!frontmatter.role ? null : (
           <Typography
             css={(theme) => css`
-              text-align: "center";
+              text-align: center;
               color: ${theme.palette.primary.contrastText};
             `}
             variant="subtitle1"
@@ -88,7 +88,7 @@ function ProjectTemplate(props: any) {
         {!frontmatter.start_date ? null : (
           <Typography
             css={(theme) => css`
-              text-align: "center";
+              text-align: center;
               color: ${theme.palette.primary.contrastText};
             `}
             variant="subtitle2"
@@ -99,8 +99,8 @@ function ProjectTemplate(props: any) {
         {!frontmatter.repo ? null : (
           <Typography
             css={(theme) => css`
-              display: "block",
-              text-align: "center",
+              display: block,
+              text-align: center,
               color: ${theme.palette.primary.contrastText},
             `}
             variant="subtitle2"

@@ -18,8 +18,8 @@ function NavLink({ title, to }: { title: string; to: string }) {
     <Button
       css={(theme) => css`
         color: ${theme.palette.primary.contrastText};
-        padding-left: ${theme.spacing(2)},
-        padding-right: ${theme.spacing(2)},
+        padding-left: ${theme.spacing(2)}px,
+        padding-right: ${theme.spacing(2)}px,
       `}
       size="large"
       color="primary"
@@ -43,7 +43,7 @@ function Footer() {
       <Divider />
       <Container
         css={(theme) => css`
-          paddingtop: ${theme.spacing(2)};
+          padding-top: ${theme.spacing(2)}px;
         `}
         maxWidth="md"
       >

@@ -26,18 +26,18 @@ function Index() {
       >
         <div
           css={css`
-            padding-top: 70;
-            padding-bottom: 50;
+            padding-top: 70px;
+            padding-bottom: 50px;
           `}
         >
           <Grid container justifyContent="center">
             <Avatar
               css={(theme) => css`
-                width: 170;
-                height: 170;
+                width: 170px;
+                height: 170px;
                 margin-bottom: theme.spacing(3);
                 border: "solid ${theme.palette.background.paper}";
-                border-width: 4;
+                border-width: 4px;
               `}
             >
               <ProfileImage />
@@ -51,7 +51,7 @@ function Index() {
       <Container maxWidth="md">
         <Typography
           css={css`
-            padding-top: 10;
+            padding-top: 10px;
           `}
           variant="h6"
           color="inherit"
@@ -63,7 +63,7 @@ function Index() {
         {/* External links */}
         <Grid
           css={css`
-            padding-top: 20;
+            padding-top: 20px;
             text-align: "center";
           `}
           container
@@ -82,7 +82,7 @@ function Index() {
               Learn More
               <ArrowForwardIcon
                 css={(theme) => css`
-                  margin-left: ${theme.spacing()};
+                  margin-left: ${theme.spacing()}px;
                 `}
               />
             </Button>

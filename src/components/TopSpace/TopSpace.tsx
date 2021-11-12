@@ -4,7 +4,7 @@ function TopSpace() {
   return (
     <div
       css={(theme) => css`
-        height: ${theme.spacing(2)};
+        height: ${theme.spacing(2)}px;
       `}
     ></div>
   );
