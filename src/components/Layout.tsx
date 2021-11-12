@@ -8,9 +8,9 @@ import Divider from "@mui/material/Divider";
 import Container from "@mui/material/Container";
 import Grid from "@mui/material/Grid";
 import Typography from "@mui/material/Typography";
+import CssBaseline from "@mui/material/CssBaseline";
 import { ThemeProvider } from "@mui/material/styles";
 import { Helmet } from "react-helmet";
-import CssBaseline from "./CssBaseline";
 import theme from "../theme";
 
 function NavLink({ title, to }: { title: string; to: string }) {
