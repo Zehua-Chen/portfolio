@@ -1,63 +1,45 @@
 import React from "react";
 import { Link } from "gatsby";
+import { css } from "@emotion/react";
 import Helmet from "react-helmet";
-import Avatar from "@material-ui/core/Avatar";
-import Typography from "@material-ui/core/Typography";
-import Button from "@material-ui/core/Button";
-import Container from "@material-ui/core/Container";
-import Grid from "@material-ui/core/Grid";
-import { Theme, createStyles, makeStyles } from "@material-ui/core/styles";
-import ArrowForwardIcon from "@material-ui/icons/ArrowForward";
+import Avatar from "@mui/material/Avatar";
+import Typography from "@mui/material/Typography";
+import Button from "@mui/material/Button";
+import Container from "@mui/material/Container";
+import Grid from "@mui/material/Grid";
+import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 import Octicon, { MarkGithub } from "@githubprimer/octicons-react";
 import Layout from "../components/Layout";
 import ProfileImage from "../components/ProfileImage";
 
-const styles = (theme: Theme) =>
-  createStyles({
-    name: {
-      background: theme.palette.primary.main,
-      color: theme.palette.primary.contrastText,
-    },
-    nameContent: {
-      paddingTop: 70,
-      paddingBottom: 50,
-    },
-    avatar: {
-      width: 170,
-      height: 170,
-      marginBottom: theme.spacing(3),
-      border: `solid ${theme.palette.background.paper}`,
-      borderWidth: 4,
-    },
-    shortBio: {
-      paddingTop: 10,
-    },
-    bioLearnMore: {
-      paddingTop: 20,
-      textAlign: "center",
-    },
-    bioLearnMoreButton: {
-      width: "100%",
-    },
-    bioLearnMoreButtonIcon: {
-      marginLeft: theme.spacing(),
-    },
-  });
-
-const useStyles = makeStyles(styles);
-
 function Index() {
-  const classes = useStyles();
-
   return (
     <Layout>
       <Helmet>
         <title>Home</title>
       </Helmet>
-      <div className={classes.name}>
-        <div className={classes.nameContent}>
-          <Grid container justify="center">
-            <Avatar className={classes.avatar}>
+      <div
+        css={(theme) => css`
+          background: ${theme.palette.primary.main};
+          color: ${theme.palette.primary.contrastText};
+        `}
+      >
+        <div
+          css={css`
+            padding-top: 70px;
+            padding-bottom: 50px;
+          `}
+        >
+          <Grid container justifyContent="center">
+            <Avatar
+              css={(theme) => css`
+                width: 170px;
+                height: 170px;
+                margin-bottom: theme.spacing(3);
+                border: "solid ${theme.palette.background.paper}";
+                border-width: 4px;
+              `}
+            >
               <ProfileImage />
             </Avatar>
           </Grid>
@@ -67,35 +49,60 @@ function Index() {
         </div>
       </div>
       <Container maxWidth="md">
-        <Typography className={classes.shortBio} variant="h6" color="inherit">
+        <Typography
+          css={css`
+            padding-top: 10px;
+          `}
+          variant="h6"
+          color="inherit"
+        >
           I am an undergrad at the University of Illinois at Urbana Champaign
           majoring in CS + LING. I enjoy writing code and I am always looking
           forward to learn to use new technologies.
         </Typography>
         {/* External links */}
-        <Grid container spacing={2} className={classes.bioLearnMore}>
+        <Grid
+          css={css`
+            padding-top: 20px;
+            text-align: "center";
+          `}
+          container
+          spacing={2}
+        >
           <Grid item xs={6}>
             <Button
-              className={classes.bioLearnMoreButton}
+              css={css`
+                width: "100%";
+              `}
               variant="text"
               color="primary"
               component={Link}
               to="/aboutme"
             >
               Learn More
-              <ArrowForwardIcon className={classes.bioLearnMoreButtonIcon} />
+              <ArrowForwardIcon
+                css={(theme) => css`
+                  margin-left: ${theme.spacing()}px;
+                `}
+              />
             </Button>
           </Grid>
           <Grid item xs={6}>
             <Button
-              className={classes.bioLearnMoreButton}
+              css={css`
+                width: "100%";
+              `}
               variant="text"
               color="primary"
               component={"a"}
               href="https://github.com/Zehua-Chen/"
             >
               Github
-              <span className={classes.bioLearnMoreButtonIcon}>
+              <span
+                css={(theme) => css`
+                  margin-left: ${theme.spacing()};
+                `}
+              >
                 <Octicon icon={MarkGithub} />
               </span>
             </Button>

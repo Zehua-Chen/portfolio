@@ -12,8 +12,10 @@ module.exports = {
     ecmaVersion: 12,
     sourceType: "module",
   },
-  plugins: ["react", "@typescript-eslint"],
-  rules: {},
+  plugins: ["react", "@typescript-eslint", "@emotion"],
+  rules: {
+    "react/react-in-jsx-scope": "off",
+  },
   settings: {
     react: {
       version: "detect",

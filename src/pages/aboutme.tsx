@@ -1,43 +1,18 @@
-import React from "react";
+import { css } from "@emotion/react";
 import Helmet from "react-helmet";
-import Accordion from "@material-ui/core/Accordion";
-import AccordionSummary from "@material-ui/core/AccordionSummary";
-import AccordionDetails from "@material-ui/core/AccordionDetails";
-import Typography from "@material-ui/core/Typography";
-import Divider from "@material-ui/core/Divider";
-import { Theme, createStyles, makeStyles } from "@material-ui/core/styles";
-import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
+import Accordion from "@mui/material/Accordion";
+import AccordionSummary from "@mui/material/AccordionSummary";
+import AccordionDetails from "@mui/material/AccordionDetails";
+import Typography from "@mui/material/Typography";
+import Divider from "@mui/material/Divider";
+import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import Layout from "../components/Layout";
 import TextContainer from "../components/TextContainer";
 import TextHeading from "../components/TextHeading";
 import TextBody from "../components/TextBody";
 import TopSpace from "../components/TopSpace";
 
-const styles = (theme: Theme) =>
-  createStyles({
-    menuButton: {
-      color: theme.palette.primary.contrastText,
-    },
-    toolbar: {
-      display: "flex",
-      flexDirection: "row",
-    },
-    toolbarTitle: {
-      color: theme.palette.primary.contrastText,
-      marginLeft: theme.spacing(),
-      flexGrow: 1,
-    },
-    divider: {
-      marginTop: theme.spacing(4),
-      marginBottom: theme.spacing(),
-    },
-  });
-
-const useStyles = makeStyles(styles);
-
 function AboutMe() {
-  const classes = useStyles();
-
   return (
     <Layout>
       <Helmet>
@@ -104,11 +79,16 @@ function AboutMe() {
             </AccordionDetails>
           </Accordion>
         </div>
-        <Divider className={classes.divider} />
+        <Divider
+          css={(theme) => css`
+            margin-top: ${theme.spacing(4)}px;
+            margin-bottom: ${theme.spacing()}px;
+          `}
+        />
         <TextBody>
-          In addition, I believe in &quot;the right tool for the right job&quot;.
-          Therefore, I choose the tech stack to use in projects based on
-          criterias like what platform do I deploy against, what set up
+          In addition, I believe in &quot;the right tool for the right
+          job&quot;. Therefore, I choose the tech stack to use in projects based
+          on criterias like what platform do I deploy against, what set up
           experience do I want my users to have, the tooling of a language,
           library or framework and so on. Because of this philosophy,{" "}
           <b>I am always available learning new skills and technologies</b>
