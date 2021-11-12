@@ -1,5 +1,5 @@
-import React, { PropsWithChildren } from "react";
-import Container, { ContainerProps } from "@material-ui/core/Container";
+import { PropsWithChildren } from "react";
+import Container, { ContainerProps } from "@mui/material/Container";
 
 interface TextContainerProps extends Omit<ContainerProps, "maxWidth"> {}
 
