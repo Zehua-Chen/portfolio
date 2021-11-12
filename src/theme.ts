@@ -1,8 +1,8 @@
-import { createMuiTheme } from "@material-ui/core/styles";
-import indigo from "@material-ui/core/colors/indigo";
-import orange from "@material-ui/core/colors/orange";
+import { createTheme } from "@mui/material/styles";
+import indigo from "@mui/material/colors/indigo";
+import orange from "@mui/material/colors/orange";
 
-export default createMuiTheme({
+export default createTheme({
   palette: {
     primary: indigo,
     secondary: orange,
