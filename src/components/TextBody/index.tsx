@@ -1,5 +1,5 @@
-import React, { PropsWithChildren } from "react";
-import Typography, { TypographyProps } from "@material-ui/core/Typography";
+import { PropsWithChildren } from "react";
+import Typography, { TypographyProps } from "@mui/material/Typography";
 
 function TextBody(props: PropsWithChildren<Omit<TypographyProps, "variant">>) {
   const { children, ...others } = props;

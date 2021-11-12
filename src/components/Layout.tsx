@@ -1,56 +1,26 @@
-import React, { PropsWithChildren, Fragment } from "react";
+import { PropsWithChildren, Fragment } from "react";
 import { Link } from "gatsby";
-import AppBar from "@material-ui/core/AppBar";
-import Toolbar from "@material-ui/core/Toolbar";
-import Button from "@material-ui/core/Button";
-import Divider from "@material-ui/core/Divider";
-import Container from "@material-ui/core/Container";
-import Grid from "@material-ui/core/Grid";
-import Typography from "@material-ui/core/Typography";
-import {
-  MuiThemeProvider,
-  createStyles,
-  makeStyles,
-  Theme,
-} from "@material-ui/core/styles";
+import { css } from "@emotion/react";
+import AppBar from "@mui/material/AppBar";
+import Toolbar from "@mui/material/Toolbar";
+import Button from "@mui/material/Button";
+import Divider from "@mui/material/Divider";
+import Container from "@mui/material/Container";
+import Grid from "@mui/material/Grid";
+import Typography from "@mui/material/Typography";
+import CssBaseline from "@mui/material/CssBaseline";
+import { ThemeProvider } from "@mui/material/styles";
 import { Helmet } from "react-helmet";
-import CssBaseline from "./CssBaseline";
 import theme from "../theme";
 
-const styles = (theme: Theme) =>
-  createStyles({
-    container: {
-    },
-    body: {
-      flexGrow: 1,
-      paddingBottom: theme.spacing(2),
-      background: theme.palette.background.default,
-    },
-    navbar: {
-      flexGrow: 0,
-    },
-    footer: {
-      flexGrow: 0,
-      background: theme.palette.background.paper,
-    },
-    footerContent: {
-      paddingTop: theme.spacing(2),
-    },
-    link: {
-      color: theme.palette.primary.contrastText,
-      paddingLeft: theme.spacing(2),
-      paddingRight: theme.spacing(2),
-    },
-  });
-
-const useStyles = makeStyles(styles);
-
 function NavLink({ title, to }: { title: string; to: string }) {
-  const classes = useStyles();
-
   return (
     <Button
-      className={classes.link}
+      css={(theme) => css`
+        color: ${theme.palette.primary.contrastText};
+        padding-left: ${theme.spacing(2)}px,
+        padding-right: ${theme.spacing(2)}px,
+      `}
       size="large"
       color="primary"
       variant="text"
@@ -63,12 +33,20 @@ function NavLink({ title, to }: { title: string; to: string }) {
 }
 
 function Footer() {
-  const classes = useStyles();
-
   return (
-    <div className={classes.footer}>
+    <div
+      css={(theme) => css`
+        flex-grow: 0;
+        background: ${theme.palette.background.paper};
+      `}
+    >
       <Divider />
-      <Container className={classes.footerContent} maxWidth="md">
+      <Container
+        css={(theme) => css`
+          padding-top: ${theme.spacing(2)}px;
+        `}
+        maxWidth="md"
+      >
         <Grid container spacing={3}>
           <Grid item xs={6}>
             <Typography variant="subtitle1">Contacts</Typography>
@@ -103,8 +81,6 @@ function Footer() {
 }
 
 function Layout(props: PropsWithChildren<{}>) {
-  const classes = useStyles();
-
   return (
     <Fragment>
       <Helmet>
@@ -124,20 +100,34 @@ function Layout(props: PropsWithChildren<{}>) {
           href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
         />
       </Helmet>
-      <MuiThemeProvider theme={theme}>
+      <ThemeProvider theme={theme}>
         <CssBaseline></CssBaseline>
-        <div className={classes.container}>
-          <AppBar className={classes.navbar} elevation={0} position="sticky">
+        <div>
+          <AppBar
+            css={css`
+              flex-grow: 0;
+            `}
+            elevation={0}
+            position="sticky"
+          >
             <Toolbar>
               <NavLink title="Home" to="/" />
               <NavLink title="About Me" to="/aboutme" />
               <NavLink title="Projects" to="/projects" />
             </Toolbar>
           </AppBar>
-          <div className={classes.body}>{props.children}</div>
+          <div
+            css={(theme) => css`
+              flex-grow: 1;
+              padding-bottom: ${theme.spacing(2)};
+              background: ${theme.palette.background.default};
+            `}
+          >
+            {props.children}
+          </div>
           <Footer />
         </div>
-      </MuiThemeProvider>
+      </ThemeProvider>
     </Fragment>
   );
 }

@@ -36,7 +36,7 @@ let config = {
       },
     },
     `gatsby-plugin-no-sourcemaps`,
-    `gatsby-plugin-material-ui`,
+    `gatsby-plugin-emotion`,
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
@@ -53,9 +53,9 @@ if (process.env.NODE_ENV === "production") {
   config.plugins.push({
     resolve: `gatsby-plugin-google-analytics`,
     options: {
-      trackingId: "UA-111245837-2"
-    }
-  })
+      trackingId: "UA-111245837-2",
+    },
+  });
 }
 
 module.exports = config;

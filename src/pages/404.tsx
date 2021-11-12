@@ -1,33 +1,26 @@
-import React from "react";
-import Typography from "@material-ui/core/Typography";
-import { createStyles, makeStyles, Theme } from "@material-ui/core/styles";
-import ErrorIcon from "@material-ui/icons/Error";
+import { css } from "@emotion/react";
+import Typography from "@mui/material/Typography";
+import ErrorIcon from "@mui/icons-material/Error";
 import Layout from "../components/Layout";
 
-const styles = (theme: Theme) =>
-  createStyles({
-    container: {
-      minHeight: "100vh",
-      display: "flex",
-      flexDirection: "column",
-      alignItems: "center",
-      justifyContent: "center",
-    },
-    icon: {
-      fontSize: 40,
-      marginBottom: theme.spacing(2),
-    },
-  });
-
-const useStyles = makeStyles(styles);
-
 function NotFoundPage() {
-  const classes = useStyles();
-
   return (
     <Layout>
-      <div className={classes.container}>
-        <ErrorIcon className={classes.icon} />
+      <div
+        css={css`
+          min-height: "100vh";
+          display: "flex";
+          flex-direction: "column";
+          align-items: "center";
+          justify-content: "center";
+        `}
+      >
+        <ErrorIcon
+          css={(theme) => css`
+            font-size: 40;
+            margin-bottom: ${theme.spacing(2)};
+          `}
+        />
         <Typography>Page Not Found!</Typography>
       </div>
     </Layout>
