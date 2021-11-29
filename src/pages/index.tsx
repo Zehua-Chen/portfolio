@@ -56,9 +56,9 @@ function Index() {
           variant="h6"
           color="inherit"
         >
-          I am an undergrad at the University of Illinois at Urbana Champaign
-          majoring in CS + LING. I enjoy writing code and I am always looking
-          forward to learn to use new technologies.
+          I am a master student at Columbia University majoring in CS. I enjoy
+          writing code and I am always looking forward to learn to use new
+          technologies.
         </Typography>
         {/* External links */}
         <Grid

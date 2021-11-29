@@ -1,5 +1,5 @@
 import { StaticQuery, graphql } from "gatsby";
-import Img from "gatsby-image";
+import { GatsbyImage } from "gatsby-plugin-image";
 
 function ProfileImage() {
   return (
@@ -8,15 +8,24 @@ function ProfileImage() {
         query {
           profilePicture: file(relativePath: { eq: "profile-image.jpg" }) {
             childImageSharp {
-              fixed(width: 170, height: 170, rotate: 90) {
-                ...GatsbyImageSharpFixed
-              }
+              gatsbyImageData(
+                layout: FIXED
+                height: 170
+                width: 170
+                transformOptions: { rotate: 90 }
+              )
             }
           }
         }
       `}
       render={(data) => {
-        return <Img fixed={data.profilePicture.childImageSharp.fixed} />;
+        return (
+          <GatsbyImage
+            imgStyle={{ borderRadius: "50%" }}
+            image={data.profilePicture.childImageSharp.gatsbyImageData}
+            alt="Zehua's Profile Avatar"
+          />
+        );
       }}
     />
   );

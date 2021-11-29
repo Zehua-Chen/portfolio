@@ -22,9 +22,11 @@ let config = {
         path: `${__dirname}/src/markdown`,
       },
     },
-    `gatsby-transformer-remark`,
-    `gatsby-transformer-sharp`,
+    // image
+    `gatsby-plugin-image`,
     `gatsby-plugin-sharp`,
+    `gatsby-transformer-sharp`,
+    `gatsby-transformer-remark`,
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
