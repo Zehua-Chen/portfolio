@@ -21,8 +21,8 @@ function AboutMe() {
       <TopSpace />
       <TextContainer>
         <TextBody>
-          I am a current undergraduate student in Computer Science +
-          Linguistics. I enjoy learning knolwedge and collaborating with others.
+          I am a current master student in Computer Science. I enjoy learning
+          knolwedge and collaborating with others.
         </TextBody>
         <TextHeading>Skills</TextHeading>
         <div>
