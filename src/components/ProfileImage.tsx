@@ -21,7 +21,9 @@ function ProfileImage() {
       render={(data) => {
         return (
           <GatsbyImage
-            imgStyle={{ borderRadius: "50%" }}
+            imgStyle={{
+              borderRadius: "50%",
+            }}
             image={data.profilePicture.childImageSharp.gatsbyImageData}
             alt="Zehua's Profile Avatar"
           />

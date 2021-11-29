@@ -30,17 +30,7 @@ function Index() {
           `}
         >
           <Grid container justifyContent="center">
-            <Avatar
-              css={(theme) => css`
-                width: 170px;
-                height: 170px;
-                margin-bottom: theme.spacing(3);
-                border: "solid ${theme.palette.background.paper}";
-                border-width: 4px;
-              `}
-            >
-              <ProfileImage />
-            </Avatar>
+            <ProfileImage />
           </Grid>
           <Typography variant="h3" color="inherit" align="center">
             I am Zehua Chen!

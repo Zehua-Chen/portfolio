@@ -60,7 +60,7 @@ function Footer() {
               <Typography
                 variant="subtitle2"
                 component="a"
-                href="https://www.linkedin.com/in/zehua-chen-fall-2017/"
+                href="https://www.linkedin.com/in/zehua-chen/"
               >
                 Linkedin
               </Typography>
@@ -72,6 +72,15 @@ function Footer() {
                 href="https://www.facebook.com/profile.php?id=100009187015242"
               >
                 Facebook
+              </Typography>
+            </div>
+            <div>
+              <Typography
+                variant="subtitle2"
+                component="a"
+                href="https://github.com/Zehua-Chen"
+              >
+                Github
               </Typography>
             </div>
           </Grid>
