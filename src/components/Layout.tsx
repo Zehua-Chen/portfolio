@@ -50,7 +50,8 @@ function Footer() {
         <Grid container spacing={3}>
           <Grid item xs={6}>
             <Typography variant="subtitle1">Contacts</Typography>
-            <Typography variant="subtitle2">zehuac2@illinois.edu</Typography>
+            <Typography variant="subtitle2">zehua-chen@outlook.com</Typography>
+            <Typography variant="subtitle2">zc2616@columbia.edu</Typography>
             <Typography variant="subtitle2">+1 217 904 9389</Typography>
           </Grid>
           <Grid item xs={6}>
