@@ -1,5 +1,5 @@
 import { StaticQuery, graphql } from "gatsby";
-import { GatsbyImage, getImage } from "gatsby-plugin-image";
+import { GatsbyImage } from "gatsby-plugin-image";
 
 function ProfileImage() {
   return (
@@ -19,10 +19,9 @@ function ProfileImage() {
         }
       `}
       render={(data) => {
-        console.log(data);
         return (
           <GatsbyImage
-            style={{ borderRadius: 10 }}
+            imgStyle={{ borderRadius: "50%" }}
             image={data.profilePicture.childImageSharp.gatsbyImageData}
             alt="Zehua's Profile Avatar"
           />
