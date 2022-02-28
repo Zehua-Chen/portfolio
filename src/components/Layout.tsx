@@ -52,7 +52,6 @@ function Footer() {
             <Typography variant="subtitle1">Contacts</Typography>
             <Typography variant="subtitle2">zehua-chen@outlook.com</Typography>
             <Typography variant="subtitle2">zc2616@columbia.edu</Typography>
-            <Typography variant="subtitle2">***REMOVED***</Typography>
           </Grid>
           <Grid item xs={6}>
             <Typography variant="subtitle1">Connect</Typography>
